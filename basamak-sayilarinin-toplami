@@ -1,0 +1,35 @@
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh) {
+        int sayi,sayac=0,asilSayi=0,armstrong,basamakDegeri,toplam=0,basamakUs=1;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Sayı  Giriniz: ");
+        sayi=input.nextInt();
+       asilSayi=sayi;
+      //basamak sayısı
+       while (sayi != 0)
+       {
+           sayi/=10;
+           sayac++;
+       }
+        System.out.println(sayac);
+       sayi=asilSayi;
+       basamakUs=1;
+       while (sayi != 0)
+       {
+           basamakDegeri=sayi%10;
+           toplam+=basamakDegeri;
+
+           sayi/=10;
+       }
+        System.out.println(toplam);
+
+    }
+
+}
+
+
+
